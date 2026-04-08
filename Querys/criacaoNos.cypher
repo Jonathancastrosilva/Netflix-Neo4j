@@ -236,7 +236,6 @@ MATCH (d:Director {name: "Robert Zemeckis"}), (m:Movie {title: "Forrest Gump"})
 MERGE (d)-[:DIRECTED]->(m);
 
 // Criação das relações DIRECTED entre Diretores e Series
-
 MATCH (d:Director {name: "Vince Gilligan"}), (s:Series {title: "Breaking Bad"})
 MERGE (d)-[:DIRECTED]->(s);
 
@@ -271,7 +270,6 @@ MATCH (d:Director {name: "Miguel Sapochnik"}), (s:Series {title: "House of the D
 MERGE (d)-[:DIRECTED]->(s);
 
 // Criação de relações ACTED_IN entre Atores e Filmes
-
 MATCH (a:Actor {name: "Sam Worthington"}), (m:Movie {title: "Avatar"})
 MERGE (a)-[:ACTED_IN]->(m);
 
@@ -334,7 +332,6 @@ MATCH (a:Actor {name: "Emma D'Arcy"}), (s:Series {title: "House of the Dragon"})
 MERGE (a)-[:ACTED_IN]->(s);
 
 // Criação de relações WATCHED entre Usuarios e Filmes
-
 MATCH (u:User {name: "Ana"}), (m:Movie {title: "Avatar"})
 MERGE (u)-[:WATCHED {rating: 8} ]->(m);
 
@@ -366,7 +363,6 @@ MATCH (u:User {name: "Felipe"}), (m:Movie {title: "Batman Begins"})
 MERGE (u)-[:WATCHED {rating: 10} ]->(m);
 
 // Criação de relações WATCHED entre Usuarios e Series
-
 MATCH (u:User {name: "Carla"}), (s:Series {title: "Breaking Bad"})
 MERGE (u)-[:WATCHED {rating: 10} ]->(s);
 
